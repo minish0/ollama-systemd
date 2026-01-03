@@ -9,7 +9,7 @@ The varialbles are specified as follows. But be aware any IDs, NAMEs, HOME are c
 2. OLLAMA_UID (default: 50002)
 3. OLLAMA_GNAME (default: ollama)
 4. OLLAMA_UNAME (default: ollama)
-5. OLLAMA_USER_HOME (default: /opt/ollama/home)
+5. OLLAMA_USER_HOME (default: /opt/ollama/share)
 
 ## add-ollama-gu.sh
 
