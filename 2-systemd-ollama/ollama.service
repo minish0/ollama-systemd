@@ -1,0 +1,27 @@
+[Unit]
+Description=Ollama Local LLM Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ollama
+Group=ollama
+WorkingDirectory=/opt/ollama/share
+ExecStart=/opt/ollama/bin/ollama serve
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+#Environment="PATH=$PATH"
+## Optional Environments
+EnvironmentFile=/opt/ollama/etc/systemd-ollama.env
+## https://github.com/ollama/ollama/blob/main/envconfig/config.go
+# Environment="OLLAMA_HOST=127.0.0.1:11434"
+# Environment="OLLAMA_CONTEXT_LENGTH=8192"
+# Environment="OLLAMA_ORIGINS="chrome-extension://*,moz-extension://*,safari-web-extension://*"
+# Environment="OLLAMA_DEBUG=1"
+## Docker image specific Environments
+# Environment="HTTPS_PROXY=https://my.proxy.example.com" 
+
+[Install]
+WantedBy=multi-user.target
