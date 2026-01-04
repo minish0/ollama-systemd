@@ -2,7 +2,7 @@
 
 ## Determine the ollama service group and user on Linux
 
-To run ollama as a systemd service, we should design ollama service group and user. It is discouraged that run ollama with systemd as root.
+To run ollama as a systemd service, we should design ollama service group and user. It is discouraged that run `ollama serve` as root via systemd.
 The varialbles are specified as follows. But be aware any IDs, NAMEs, HOME are check existence or duplication.
 
 1. OLLAMA_GID (default: 50002)
