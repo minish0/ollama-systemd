@@ -1,4 +1,4 @@
-There are 2 simple shell scripts are in the 0-download directory.
+There are 2 simple shell scripts in the 0-download directory.
 
 ##  ollama-download.sh
 
