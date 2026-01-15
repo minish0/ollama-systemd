@@ -15,6 +15,10 @@ StandardError=journal
 #Environment="PATH=$PATH"
 ## Optional Environments
 EnvironmentFile=/opt/ollama/etc/systemd-ollama.env
+## NVIDIA GPU Specific Environments
+EnvironmentFile=/opt/ollama/etc/systemd-ollama-cuda.env
+## AMD GPU Specific Environments
+EnvironmentFile=/opt/ollama/etc/systemd-ollama-rocm.env
 ## https://github.com/ollama/ollama/blob/main/envconfig/config.go
 # Environment="OLLAMA_HOST=127.0.0.1:11434"
 # Environment="OLLAMA_CONTEXT_LENGTH=8192"
