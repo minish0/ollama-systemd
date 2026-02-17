@@ -21,5 +21,5 @@ if [ "$?" -eq '0' ]; then "${SUDO}" systemctl stop --quiet ollama; fi
 ### Extract new archive
 ## extract ollama archive with `0-download/ollama-extract.sh`
 /bin/sh 0-download/ollama-extract.sh
-
-
+### Confirm current ollama version
+"${OLLAMA_ROOT}"/bin/ollama --version
