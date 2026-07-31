@@ -14,10 +14,10 @@ if [ "${uid}" -ne 0 ]; then SUDO='sudo'; else SUDO=''; fi
 ### download ollama archive with `0-download/ollama-download.sh`
 #0-download/ollama-download.sh
 ### Stop ollama.service for upgrading
-"${SUDO}" systemctl status --quiet --no-pager ollama
-if [ "$?" -eq '0' ]; then "${SUDO}" systemctl stop --quiet ollama; fi
+${SUDO} systemctl status --quiet --no-pager ollama
+if [ "$?" -eq '0' ]; then ${SUDO} systemctl stop --quiet ollama; fi
 ### Remove old binaries except models, systemd config
-"${SUDO}" rm -rf "${OLLAMA_ROOT}/"{bin,lib}
+${SUDO} rm -rf "${OLLAMA_ROOT}/"{bin,lib}
 ### Extract new archive
 ## extract ollama archive with `0-download/ollama-extract.sh`
 /bin/sh 0-download/ollama-extract.sh
