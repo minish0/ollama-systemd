@@ -13,6 +13,8 @@ uid=$(id -u)
 if [ "${uid}" -ne 0 ]; then SUDO='sudo'; else SUDO=''; fi
 ### download ollama archive with `0-download/ollama-download.sh`
 #0-download/ollama-download.sh
+### Confirm current ollama version
+"${OLLAMA_ROOT}"/bin/ollama --version
 ### Stop ollama.service for upgrading
 "${SUDO}" systemctl status --quiet --no-pager ollama
 if [ "$?" -eq '0' ]; then "${SUDO}" systemctl stop --quiet ollama; fi
